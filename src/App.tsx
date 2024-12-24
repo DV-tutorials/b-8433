@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Education from "./pages/Education";
 import Blog from "./pages/Blog";
+import ChatBot from "./components/ChatBot";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navigation />
-        <div className="pt-16"> {/* Add padding for fixed navbar */}
+        <div className="pt-16">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
           </Routes>
         </div>
+        <ChatBot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
