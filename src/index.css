@@ -30,8 +30,8 @@
   gap: 1.5rem;
   padding: 1.5rem;
   width: 100%;
-  max-width: 100%;
-  min-height: 100vh;
+  max-width: 1400px;
+  min-height: calc(100vh - 4rem);
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -47,6 +47,14 @@
 .bento-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet and mobile responsiveness */
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
